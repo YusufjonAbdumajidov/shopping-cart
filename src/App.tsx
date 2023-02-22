@@ -31,7 +31,6 @@ const App = () => {
     'products',
     getProducts
   );
-  console.log(data);
 
   const getTotalItems = (items: CartItemType[]) =>
     items.reduce((ack: number, item) => ack + item.amount, 0);
@@ -77,7 +76,7 @@ const App = () => {
           addToCart={handleAddToCart}
           removeFromCart={handleRemoveFromCart}
         />
-      </Drawer>
+      </Drawer> 
       <StyledButton onClick={() => setCartOpen(true)}>
         <Badge badgeContent={getTotalItems(cartItems)} color='error'>
           <AddShoppingCartIcon />
